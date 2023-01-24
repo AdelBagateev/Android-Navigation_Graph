@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigate_graph"
+    app:startDestination="@id/navigateFragment2">
+
+    <fragment
+        android:id="@+id/danilFragment"
+        android:name="com.example.navigation_graph.fragments.for_nestedGraph.DanilFragment"
+        android:label="DanilFragment" />
+    <fragment
+        android:id="@+id/iliaFragment"
+        android:name="com.example.navigation_graph.fragments.for_nestedGraph.IliaFragment"
+        android:label="IliaFragment" />
+    <fragment
+        android:id="@+id/kolyaFragment"
+        android:name="com.example.navigation_graph.fragments.for_nestedGraph.KolyaFragment"
+        android:label="KolyaFragment" />
+    <fragment
+        android:id="@+id/navigateFragment2"
+        android:name="com.example.navigation_graph.fragments.for_bnv.NavigateFragment"
+        android:label="NavigateFragment" >
+        <action
+            android:id="@+id/action_navigateFragment2_to_iliaFragment"
+            app:destination="@id/iliaFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_navigateFragment2_to_danilFragment"
+            app:destination="@id/danilFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_navigateFragment2_to_mashaFragment"
+            app:destination="@id/mashaFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_navigateFragment2_to_kolyaFragment"
+            app:destination="@id/kolyaFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mashaFragment"
+        android:name="com.example.navigation_graph.fragments.for_nestedGraph.MashaFragment"
+        android:label="MashaFragment" />
+</navigation>
